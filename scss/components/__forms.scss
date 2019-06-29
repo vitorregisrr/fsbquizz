@@ -1,0 +1,33 @@
+.form-control{
+    background-color: transparent;
+    height: 45px;
+    border-radius: 0;
+    border: none;
+    color: rgb(134, 134, 134);
+    font-size: 18px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    @include transition();
+
+    
+    @media screen and (max-width: $bp-LG){
+        font-size: 16px;
+    }
+
+    &::placeholder{
+        color: rgba(24, 24, 24, 0.76);
+    }
+
+    &:focus, &:active{
+        outline: none;
+        box-shadow: none;
+        border-color: #74a038;
+
+        &.has-error{
+            border-color: rgb(230, 115, 115);
+        }
+    }
+}
+
+textarea.form-control{
+    height: auto;
+}

@@ -1,0 +1,27 @@
+.btn {
+    background-color: $color-primary;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 5px 100px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.178);
+    @include transition();
+
+    @media screen and (max-width: $bp-LG){
+        padding: 5px 70px;
+    }
+    
+    &:hover {
+        @include scale(1.02);
+    }
+
+    &-secondary {
+        background-color: $color-secondary;
+
+        &:hover {
+            background-color: darken($color-secondary, 5);
+        }
+    }
+}

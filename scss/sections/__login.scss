@@ -1,0 +1,145 @@
+.login{
+    position: relative;
+    background-image: url(../images/backgrounds/bg-login.png);
+    background-position: center bottom;
+    background-size: cover;
+    background-color: #1a2e05;
+    height: auto;
+    min-height: 100vh;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: inherit;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-top: 60px;
+
+        @media screen and (max-width: $bp-LG){
+            padding-top: 40px;
+        }
+    }
+
+    &__header{
+        position: relative;
+        background: #fff;
+        padding: 80px 120px 40px 140px;
+        margin-bottom: 50px;
+        width: 90%;
+        font-size: 25px;
+        text-align: center;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.329);
+        @include transition();
+
+        @media screen and (max-width: $bp-LG){
+            padding: 30px 30px 20px 30px;
+            font-size: 16px;
+            width: 100%;
+        }
+        
+
+        @media screen and (max-height: 580px){
+            padding: 30px 30px 20px 30px;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        @media screen and (max-height: 600px) and (max-width: 360px){
+            font-size: 15px;
+        }
+
+        &:hover{
+            @include scale(1.01);
+        }
+
+        &__brand{
+            position: absolute;
+            top: -110px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 200px;
+            
+            @media screen and (max-width: $bp-LG){
+                top: -58px;
+                width: 200px;
+                height: 100px;
+            }
+
+            @media screen and (max-height: 580px){
+                top: -58px;
+                width: 200px;
+                height: 100px;
+            }
+            
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__form{
+        background: #fff;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.329);
+        padding: 30px 70px 40px 70px;
+        width: 70%;
+        margin-bottom: 50px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include transition();
+
+        @media screen and (max-width: $bp-LG){
+            width: 87%;
+            padding: 5px 30px 20px 30px;
+            font-size: 19px;
+        }
+
+        @media screen and (max-height: 580px){
+            width: 87%;
+            padding: 5px 30px 20px 30px;
+            font-size: 19px;
+        }
+
+        &:hover{
+            @include scale(1.01);
+        }
+
+        input{
+            &:first-child{
+                @media screen and (min-width: $bp-LG){
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &__errors{
+            margin-bottom: 10px;
+            display: none;
+
+            span{
+                display: block;
+                color: rgb(202, 39, 39);
+                font-size: 14px;
+                text-align: center;
+                padding-bottom: 5px;
+
+                &:not(:last-child){
+                    margin-bottom: 5px;
+                    border-bottom: 1px solid rgb(241, 241, 241);
+                }
+            }
+        }
+    }
+}

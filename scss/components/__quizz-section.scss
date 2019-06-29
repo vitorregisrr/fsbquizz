@@ -1,0 +1,7 @@
+.quizz-section{
+    display: none;
+
+    &.show{
+        display: block;
+    }
+}
