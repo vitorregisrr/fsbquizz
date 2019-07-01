@@ -1,6 +1,11 @@
 (function () {
     'use strict';
 
+    // Start libs
+    //Init Libs
+    new WOW().init();
+    const contentScroll = new SimpleBar($('main')[0])
+
     // Start questions carousel //
     let questionsCarousel = $(".owl-carousel.quizz__carousel");
     questionsCarousel = questionsCarousel.owlCarousel({
@@ -24,7 +29,7 @@
         animateIn: 'zoomIn',
         startPosition: 0,
     });
-    
+
     window.dispatchEvent(new Event('resize'));
 
     ////**  Create Global State **////
